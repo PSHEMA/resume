@@ -1,40 +1,19 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+// Simple script for mobile menu toggle
+document.querySelector('.mobile-menu').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
       e.preventDefault();
-  
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-  
-      if (targetElement) {
-        // Calculate the target element's offset from the top of the page
-        const offset = targetElement.getBoundingClientRect().top + window.scrollY;
-  
-        // Scroll to the target element with smooth behavior
-        window.scrollTo({
-          top: offset,
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      window.scrollTo({
+          top: targetElement.offsetTop - 70,
           behavior: 'smooth'
-        });
-      }
-    });
+      });
   });
-
-
-if (window.innerWidth <= 768) {
-  window.addEventListener('scroll', function () {
-      const skillsSection = document.getElementById('skills');
-      if (!skillsSection) {
-          return;
-      }
-      
-      const rect = skillsSection.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      if (rect.top < windowHeight && rect.bottom >= 0) {
-          const skillBoxes = document.querySelectorAll('.skill-box');
-          skillBoxes.forEach(skillBox => {
-              skillBox.classList.add('show-skill');
-          });
-      }
-  });
-}
+});

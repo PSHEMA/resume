@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shema Placide - Full-Stack Developer</title>
+    <title>Placide SHEMA - Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Shema Placide</div>
+                <div class="logo">Placide SHEMA</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -31,7 +32,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Shema Placide</h1>
-                <p>Full-Stack Developer specializing in scalable web applications, with expertise in HTML, CSS, JavaScript, Vue.js, Node.js/Express, Python, and more.</p>
+                <p>Full-Stack Developer specializing in scalable web applications, with expertise in HTML, CSS, JavaScript, React.js, Node.js/Express, Python, and more.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View Projects</a>
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -129,9 +130,7 @@
                         <h3>UniNest - University Residence Management System</h3>
                         <div class="project-tags">
                             <span class="project-tag">Django</span>
-                            <span class="project-tag">PostgreSQL</span>
                             <span class="project-tag">REST API</span>
-                            <span class="project-tag">React.js</span>
                         </div>
                         <p>A comprehensive platform to manage student accommodations, maintenance requests, and payments, with features for room allocation and request tracking.</p>
                         <a href="https://github.com/Placide11/Resident-Management-Sysytem.git" target="_blank" class="btn">View Project</a>
@@ -269,7 +268,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Me a Message</h3>
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -307,5 +306,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="email.js"></script>
 </body>
 </html>

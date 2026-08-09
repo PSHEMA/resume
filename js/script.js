@@ -1,61 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Mobile menu toggle
+const menuBtn = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenu) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    });
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
 
-    // Intersection Observer for scroll animations
-    const targets = document.querySelectorAll('.scroll-target');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
+// Contact form -> EmailJS
+// Replace these three IDs with your own if you regenerate your EmailJS account.
+const form = document.getElementById('contactForm');
+const status = document.getElementById('form-status');
 
-    targets.forEach(target => {
-        observer.observe(target);
-    });
+if (window.emailjs) {
+    emailjs.init('g6IWWbNMJULo7mk0v');
+}
 
-    // Active nav link highlighting on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('header .nav-link');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    const onScroll = () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
+    status.textContent = 'sending…';
+    status.style.color = 'var(--ink-dim)';
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+    const params = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
     };
 
-    window.addEventListener('scroll', onScroll);
-    
+    emailjs.send('service_yr51wa8', 'template_3gzqw1p', params)
+        .then(() => {
+            status.textContent = 'message sent — thanks, I\'ll reply soon.';
+            status.style.color = '#5ED9A0';
+            form.reset();
+        })
+        .catch((err) => {
+            status.textContent = 'send failed — email me directly instead.';
+            status.style.color = '#E37B7B';
+            console.error(err);
+        });
 });

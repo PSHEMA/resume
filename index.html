@@ -3,213 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placide Shema - Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <title>Placide SHEMA — Software Engineer, Kigali</title>
+    <meta name="description" content="Placide SHEMA — software engineer focused on building practical digital products and developing expertise in cybersecurity, defensive security, and secure systems.">
+    <meta name="theme-color" content="#0C1310">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <header class="bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">PS</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
-                <a href="#skills" class="nav-link text-slate-300 hover:text-white">Skills</a>
-                <a href="#projects" class="nav-link text-slate-300 hover:text-white">Projects</a>
-                <a href="#experience" class="nav-link text-slate-300 hover:text-white">Experience</a>
-                <a href="https://docs.google.com/document/d/1DIPtgB7X3LLlrK4C0OZxg_vhBIm1A33Z/edit?usp=sharing&ouid=113085538133982053639&rtpof=true&sd=true" target="_blank" class="nav-link text-slate-300 hover:text-white">Resume</a>
+    <header>
+        <nav class="wrap">
+            <a href="#" class="logo"><span class="dot"></span>PLACIDE SHEMA</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#security">Cybersecurity</a>
+                <a href="#experience">Experience</a>
+                <a href="#about">About</a>
+                <a href="https://drive.google.com/file/d/1fOsPYdOZcl6EHh_uPNxy1YVf5vONA46O/view?usp=sharing" target="_blank">Résumé</a>
+                <a href="#contact" class="nav-cta">Get in touch</a>
             </div>
-            <a href="#contact" class="hidden md:block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
-                Contact Me
-            </a>
-            <button id="mobile-menu-button" class="md:hidden text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="menu-btn" id="mobile-menu-button" aria-label="Toggle menu">☰</button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-            <a href="#about" class="block nav-link text-slate-300 hover:text-white">About</a>
-            <a href="#skills" class="block nav-link text-slate-300 hover:text-white">Skills</a>
-            <a href="#projects" class="block nav-link text-slate-300 hover:text-white">Projects</a>
-            <a href="#experience" class="block nav-link text-slate-300 hover:text-white">Experience</a>
-            <a href="#contact" class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
-                Contact Me
-            </a>
+        <div id="mobile-menu">
+            <a href="#work">Work</a>
+            <a href="#security">Cybersecurity</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="resume.pdf" target="_blank">Résumé</a>
+            <a href="#contact">Get in touch</a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main>
 
-        <section id="home" class="text-center min-h-[70vh] flex flex-col justify-center items-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
-                <span class="text-slate-200">Hi, I'm</span> <span class="gradient-text">Placide Shema</span>
-            </h1>
-            <h2 class="mt-4 text-3xl md:text-4xl font-bold text-slate-300">A Full-Stack Engineer</h2>
-            <p class="mt-6 max-w-2xl text-lg text-slate-400">
-                I build scalable and efficient web applications from front-end to back-end, turning complex problems into elegant digital solutions.
-            </p>
-            <div class="mt-8 flex flex-col sm:flex-row gap-4">
-                <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105">
-                    View My Work
-                </a>
-                <a href="mailto:placideshema11@gmail.com" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-8 rounded-full transition-transform hover:scale-105">
-                    Get In Touch
-                </a>
-            </div>
-        </section>
-
-        <section id="about" class="py-20 scroll-target">
-            <h2 class="text-4xl font-bold text-center mb-12">About <span class="gradient-text">Me</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-                <div class="md:col-span-2 flex justify-center">
-                    <div class="w-48 h-48 md:w-64 md:h-64 rounded-full flex items-center justify-center text-8xl font-bold bg-gradient-to-br from-slate-700 to-slate-800 border-4 border-sky-500">
-                        <img src="Image.jpg" alt="Profile Picture" class="w-full h-full object-cover rounded-full">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <p class="eyebrow">Software Engineer · Cybersecurity — Kigali, Rwanda</p>
+                    <h1>I build software.<br>I understand <em>security</em>.</h1>
+                    <p class="lede">I build practical digital products — and I spend just as much time thinking about how systems get attacked and how they should be defended. Development and defense, treated as one discipline.</p>
+                    <div class="hero-ctas">
+                        <a href="#work" class="btn btn-solid">View my work →</a>
+                        <a href="#security" class="btn btn-outline">Cybersecurity</a>
+                        <a href="https://drive.google.com/file/d/1fOsPYdOZcl6EHh_uPNxy1YVf5vONA46O/view?usp=sharing" target="_blank" class="btn btn-outline">Résumé</a>
                     </div>
                 </div>
-                <div class="md:col-span-3 text-lg text-slate-400">
-                    <p class="mb-4">
-                        Innovative Full-Stack Developer with expertise in JavaScript (React, Vue, Node.js) and Python (Django, Flask). I have a proven track record of designing and deploying scalable web applications, from the initial UI/UX concepts in Figma to the final cloud deployment.
-                    </p>
-                    <p class="mb-4">
-                        My passion lies in building impactful digital solutions that are not only functional but also provide a great user experience. I'm adept at database management, REST API design, and have a strong foundation in digital strategy, including SEO and content planning.
-                    </p>
-                    <div class="mt-6 flex space-x-6 text-2xl text-slate-400">
-                        <a href="https://github.com/PSHEMA" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/placide-shema-8a9139249" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:placideshema11@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fas fa-envelope"></i></a>
+                <div class="panel">
+                    <div class="panel-head"><span>SYSTEM STATUS</span><span class="blip"></span></div>
+                    <div class="panel-body">
+                        <div class="panel-row"><span class="k">status</span><span class="v">open to opportunities</span></div>
+                        <div class="panel-row"><span class="k">focus</span><span class="v">software · cybersecurity</span></div>
+                        <div class="panel-row"><span class="k">location</span><span class="v">Kigali, Rwanda</span></div>
+                        <div class="panel-row"><span class="k">security</span><span class="v">defensive security · SIEM</span></div>
+                        <div class="panel-row"><span class="k">stack</span><span class="v">Python · JS · Django · React</span></div>
+                        <div class="panel-row"><span class="k">training</span><span class="v">NCSA cyber defense, 2026</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="py-20 scroll-target">
-            <h2 class="text-4xl font-bold text-center mb-12">My <span class="gradient-text">Tech Stack</span></h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-python text-4xl mb-2"></i><p>Python</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-js-square text-4xl mb-2"></i><p>JavaScript</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-react text-4xl mb-2"></i><p>React</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-docker text-4xl mb-2"></i><p>Docker</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-node-js text-4xl mb-2"></i><p>Node.js</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fas fa-database text-4xl mb-2"></i><p>PostgreSQL</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-aws text-4xl mb-2"></i><p>AWS</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-figma text-4xl mb-2"></i><p>Figma</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-html5 text-4xl mb-2"></i><p>HTML5</p></div>
-                <div class="skill-icon-container p-4 rounded-lg"><i class="fab fa-css3-alt text-4xl mb-2"></i><p>CSS3</p></div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20 scroll-target">
-            <h2 class="text-4xl font-bold text-center mb-12">Featured <span class="gradient-text">Projects</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card flex flex-col">
-                    <!-- <img src="https://via.placeholder.com/400x250/0f172a/38bdf8?text=FixMyArea" alt="FixMyArea Project" class="rounded-t-lg"> -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-slate-100 mb-2">Proci - Local Services Aggregator</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">Proci is a mobile application built with Flutter, designed to bridge the gap between customers and reliable local service providers in Kigali, Rwanda. It provides a seamless, two-sided marketplace where users can find, book, and review services, while providers can manage their jobs, profile, and customer feedback.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">Fluuter</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">Firebase</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">APIs</span>
-                        </div>
-                        <div class="mt-auto flex gap-4">
-                            <!-- <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">Live Demo</a> -->
-                            <a href="https://github.com/PSHEMA/FixA.git" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">View Code</a>
-                        </div>
-                    </div>
+        <section id="build">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">What I Do</p>
+                    <h2>Software, security, and products</h2>
                 </div>
-                <div class="glass-card flex flex-col">
-                    <!-- <img src="https://via.placeholder.com/400x250/0f172a/38bdf8?text=AgriSync+Lite" alt="AgriSync Lite Project" class="rounded-t-lg"> -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-slate-100 mb-2">AgriSync Lite – A Farm Operations Platform</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">AgriSync Lite is a simplified farm management web application designed to help farmers efficiently manage daily farm operations such as crop tracking, task assignment, and finance monitoring.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">Django</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">React + Vite</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">JWT</span>
-                        </div>
-                        <div class="mt-auto flex gap-4">
-                            <!-- <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">Live Demo</a> -->
-                            <a href="https://github.com/PSHEMA/AgriSync.git" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">View Code</a>
-                        </div>
+                <div class="pillars">
+                    <div class="pillar">
+                        <span class="num">01</span>
+                        <h3>Software engineering</h3>
+                        <p>Full-stack web and mobile applications, REST APIs, authentication, and the data systems behind them.</p>
                     </div>
-                </div>
-                <div class="glass-card flex flex-col">
-                    <!-- <img src="https://via.placeholder.com/400x250/0f172a/38bdf8?text=UniNest" alt="UniNest Project" class="rounded-t-lg"> -->
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-slate-100 mb-2">Multi-User File Manager</h3>
-                        <p class="text-slate-400 mb-4 flex-grow">The Multi-User File Manager is a backend application that provides a collaborative platform for managing files. It supports secure user authentication, file management operations, multilingual user interface support, and asynchronous task handling using Redis. The project is built with Node.js, Express.js, and integrates MySQL/MongoDB for data storage.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">Node.js</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">MySQL</span>
-                            <span class="bg-slate-700 text-xs font-semibold px-2 py-1 rounded">Redis</span>
-                        </div>
-                        <div class="mt-auto flex gap-4">
-                            <!-- <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">Live Demo</a> -->
-                            <a href="https://github.com/Placide11/File-Manager-System.git" target="_blank" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 px-4 rounded-lg w-full text-center transition-colors">View Code</a>
-                        </div>
+                    <div class="pillar">
+                        <span class="num">02</span>
+                        <h3>Backend &amp; systems</h3>
+                        <p>Django, Node.js, relational and document databases, asynchronous processing, and Linux-based systems.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="num">03</span>
+                        <h3>Cybersecurity</h3>
+                        <p>Security monitoring, SIEM, log analysis, incident-response fundamentals, and system hardening.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="py-20 scroll-target">
-            <h2 class="text-4xl font-bold text-center mb-16">Professional <span class="gradient-text">Experience</span></h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="relative timeline">
-                    <div class="mb-12 relative timeline-item pl-10">
-                        <p class="text-sky-400 font-semibold">Jan 2025 – Present</p>
-                        <h3 class="text-xl font-bold text-slate-100 mt-1">Software Engineer (Intern)</h3>
-                        <p class="text-slate-400 font-medium">PawaStats – Remote</p>
-                        <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                            <li>Developed and optimized APIs for analytics and reporting systems.</li>
-                            <li>Built interactive dashboards with React.js and Next.js for data visualization.</li>
+        <section id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>A few things I've shipped</h2>
+                </div>
+
+                <div class="project">
+                    <div class="project-index">01</div>
+                    <div>
+                        <p class="project-tag">Two-sided marketplace</p>
+                        <h3 class="project-title">Proxi — local services, made findable</h3>
+                        <div class="project-body">
+                            <div class="project-col">
+                                <h4>Problem</h4>
+                                <p>Finding a reliable local service provider in Kigali usually comes down to word of mouth — there's no shared, trustworthy way to discover or vet one.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Solution</h4>
+                                <p>A Flutter marketplace where customers discover, book, and review providers, and providers manage jobs, profiles, and reputation in one place.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Engineering</h4>
+                                <p>Firebase auth &amp; realtime data, a two-sided booking flow, and a review system that builds provider reputation over time.</p>
+                            </div>
+                        </div>
+                        <div class="stack-row">
+                            <span class="stack-chip">Flutter</span><span class="stack-chip">Firebase</span><span class="stack-chip">REST APIs</span>
+                        </div>
+                        <div class="security-note">
+                            <h4>Security notes</h4>
+                            <p>Firebase Authentication for identity, role-based access separating customer and provider permissions, and server-side validation on booking and review writes to limit abuse.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PSHEMA/FixA.git" target="_blank">View code ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-index">02</div>
+                    <div>
+                        <p class="project-tag">Farm operations platform</p>
+                        <h3 class="project-title">AgriSync Lite — farm management, simplified</h3>
+                        <div class="project-body">
+                            <div class="project-col">
+                                <h4>Problem</h4>
+                                <p>Day-to-day farm operations — crop tracking, task assignment, finances — are usually managed informally, which makes them hard to plan around.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Solution</h4>
+                                <p>A lightweight web app that gives farmers one place to track crops, assign tasks, and monitor finances.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Engineering</h4>
+                                <p>Django REST Framework backend, a React + Vite frontend, and JWT-based authentication throughout.</p>
+                            </div>
+                        </div>
+                        <div class="stack-row">
+                            <span class="stack-chip">Django</span><span class="stack-chip">React + Vite</span><span class="stack-chip">JWT</span>
+                        </div>
+                        <div class="security-note">
+                            <h4>Security notes</h4>
+                            <p>JWT-based authentication with token expiry, Django's built-in protections against common web vulnerabilities, and API endpoints scoped so farm data is only visible to authorized accounts.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PSHEMA/AgriSync.git" target="_blank">View code ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-index">03</div>
+                    <div>
+                        <p class="project-tag">Collaborative backend</p>
+                        <h3 class="project-title">Multi-User File Manager</h3>
+                        <div class="project-body">
+                            <div class="project-col">
+                                <h4>Problem</h4>
+                                <p>Teams need a secure way to share and manage files together — with real accounts, permissions, and background processing, not just a shared folder.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Solution</h4>
+                                <p>A backend platform for collaborative file management with multi-user access control and a multilingual interface.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Engineering</h4>
+                                <p>Node.js/Express API, MySQL and MongoDB for persistence, and Redis-backed async task handling for background jobs.</p>
+                            </div>
+                        </div>
+                        <div class="stack-row">
+                            <span class="stack-chip">Node.js</span><span class="stack-chip">MySQL / MongoDB</span><span class="stack-chip">Redis</span>
+                        </div>
+                        <div class="security-note">
+                            <h4>Security notes</h4>
+                            <p>Multi-user access control so files and jobs are scoped to the accounts that own them, authenticated API routes, and Redis-queued background jobs kept isolated from user-facing request handling.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Placide11/File-Manager-System.git" target="_blank">View code ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-index">04</div>
+                    <div>
+                        <p class="project-tag">SOC lab — network defense</p>
+                        <h3 class="project-title">Cyber Defense Lab — detection to automated containment</h3>
+                        <div class="project-body">
+                            <div class="project-col">
+                                <h4>Problem</h4>
+                                <p>Without centralized visibility, network attacks — reconnaissance scans, floods — go undetected until damage is already done.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Solution</h4>
+                                <p>Built and validated an intrusion detection and automated-response pipeline in an isolated lab, from raw network traffic to an auto-reversed firewall block.</p>
+                            </div>
+                            <div class="project-col">
+                                <h4>Engineering</h4>
+                                <p>Suricata NIDS forwarding eve.json to a Wazuh Manager via an extended JSON decoder, with custom correlation rules mapped to MITRE ATT&amp;CK and Wazuh Active Response driving iptables.</p>
+                            </div>
+                        </div>
+                        <div class="metric-row">
+                            <div class="metric"><span class="n">2 / 2</span><span class="l">attacks detected &amp; contained</span></div>
+                            <div class="metric"><span class="n">&lt;1s</span><span class="l">detection-to-block latency</span></div>
+                            <div class="metric"><span class="n">0</span><span class="l">manual response steps</span></div>
+                        </div>
+                        <div class="stack-row">
+                            <span class="stack-chip">Wazuh (SIEM)</span><span class="stack-chip">Suricata</span><span class="stack-chip">Kali Linux</span><span class="stack-chip">iptables</span><span class="stack-chip">MITRE ATT&amp;CK</span>
+                        </div>
+                        <div class="security-note">
+                            <h4>Security focus</h4>
+                            <p>Simulated an Nmap NSE reconnaissance scan (T1595) and a GoldenEye HTTP flood (T1498) from a Kali attacker VM. Both were detected within the same second by custom Wazuh rules and auto-contained via Active Response firewall-drop, with the block automatically lifted ~3 minutes later — a full detect → alert → contain → recover cycle with no manual intervention.</p>
+                        </div>
+                        <div class="evidence-row">
+                            <figure>
+                                <img src="lab-architecture.png" alt="Cyber Defense Lab network architecture and Active Response flow">
+                                <figcaption>Lab architecture — attacker → Suricata/Wazuh Agent → Wazuh Manager → iptables</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="active-response.png" alt="active response triggered by Wazuh alert">
+                                <figcaption>Active Response firewall-drop triggered by Wazuh alert</figcaption>
+                            </figure>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://docs.google.com/document/d/1hV6D7H3FHL5jRYix469YcKhrOoXRwR8N/edit?usp=sharing&ouid=104298445275995867604&rtpof=true&sd=true" target="_blank">Read the full report ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="security">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Cybersecurity</p>
+                    <h2>Building software is half the job. Defending it is the other.</h2>
+                </div>
+
+                <div class="track-diagram">
+                    <div class="track-col">
+                        <div class="track-node root">PLACIDE SHEMA</div>
+                        <div class="track-connector"></div>
+                        <div class="track-branches">
+                            <div class="track-col">
+                                <div class="track-node">SOFTWARE ENGINEERING</div>
+                                <div class="track-connector"></div>
+                                <div class="track-node leaf">Applications · APIs · Backend</div>
+                            </div>
+                            <div class="track-col">
+                                <div class="track-node">CYBERSECURITY</div>
+                                <div class="track-connector"></div>
+                                <div class="track-node leaf">Defense · Monitoring · Response</div>
+                            </div>
+                        </div>
+                        <div class="track-connector"></div>
+                        <div class="track-node root">SECURE SOFTWARE</div>
+                    </div>
+                </div>
+
+                <div class="sec-grid">
+                    <div class="sec-card">
+                        <h4>SIEM &amp; Log Analysis</h4>
+                        <p>Hands-on with Wazuh for security monitoring, log correlation, and threat detection — including a custom detection pipeline built end-to-end in the Cyber Defense Lab below.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>Security Monitoring</h4>
+                        <p>Watching live alert streams and distinguishing real attack patterns from background noise.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>System &amp; Network Security</h4>
+                        <p>Linux administration and hardening, plus working knowledge of TCP/IP, DNS, DHCP, and HTTP/S.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>Automated Response</h4>
+                        <p>Configuring Wazuh Active Response to contain threats — firewall-drop rules driven directly by correlated alerts.</p>
+                    </div>
+                </div>
+
+                <p class="eyebrow" style="margin-bottom:16px;">Knowledge &amp; training</p>
+                <div class="sec-grid">
+                    <div class="sec-card">
+                        <h4>Incident Response</h4>
+                        <p>Structured response to security events — detect, contain, investigate, report.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>Application Security</h4>
+                        <p>Authentication, authorization, and secure API design — covered in training and applied in the security notes above.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>Email Security</h4>
+                        <p>SPF, DKIM and DMARC, plus phishing awareness and common email-based attack patterns.</p>
+                    </div>
+                    <div class="sec-card">
+                        <h4>Malware Analysis</h4>
+                        <p>Foundational malware behavior, identification, and containment concepts.</p>
+                    </div>
+                </div>
+
+                <div class="training-panel">
+                    <p class="when">May 2026 – Jul 2026</p>
+                    <h3>Cyber Defense and Response Training</h3>
+                    <p class="org">NCSA — Kigali, Rwanda</p>
+                    <div class="skill-tags">
+                        <span>Security monitoring</span>
+                        <span>Wazuh SIEM</span>
+                        <span>Log analysis</span>
+                        <span>Threat detection</span>
+                        <span>Email security</span>
+                        <span>Malware analysis</span>
+                        <span>Linux security operations</span>
+                        <span>Network security monitoring</span>
+                    </div>
+                    <a href="certificate.pdf" target="_blank" class="cert-btn">View certificate ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Technologies</p>
+                    <h2>What's actually behind the work above</h2>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-group">
+                        <h4>Languages</h4>
+                        <ul><li>Python</li><li>JavaScript</li><li>SQL</li></ul>
+                    </div>
+                    <div class="tech-group">
+                        <h4>Frontend</h4>
+                        <ul><li>React</li><li>Next.js</li><li>Flutter</li><li>HTML5 / CSS</li></ul>
+                    </div>
+                    <div class="tech-group">
+                        <h4>Backend</h4>
+                        <ul><li>Node.js / Express</li><li>Django / DRF</li><li>REST APIs</li></ul>
+                    </div>
+                    <div class="tech-group">
+                        <h4>Databases</h4>
+                        <ul><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Firebase</li></ul>
+                    </div>
+                    <div class="tech-group">
+                        <h4>Security &amp; Infrastructure</h4>
+                        <ul><li>Wazuh / Suricata</li><li>Linux administration</li><li>Git / CI/CD</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Experience</p>
+                    <h2>Where the work has happened</h2>
+                    <p class="muted" style="margin-top:8px; font-size:14.5px;">Employment history — see the <a href="#security" style="color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-dim);">Cybersecurity</a> section for training.</p>
+                </div>
+                <div class="tl">
+                    <div class="tl-item">
+                        <p class="when">2025 – Present</p>
+                        <h3>Field Researcher</h3>
+                        <p class="org">Vanguard Economics Ltd — Kigali, Rwanda</p>
+                        <ul>
+                            <li>Collected and validated socio-economic data for development research using SurveyCTO</li>
+                            <li>Maintained data accuracy, confidentiality, and structured reporting under strict deadlines</li>
                         </ul>
                     </div>
-                    <div class="mb-12 relative timeline-item pl-10">
-                        <p class="text-sky-400 font-semibold">Jan 2024 – Feb 2024</p>
-                        <h3 class="text-xl font-bold text-slate-100 mt-1">Web Developer (Intern)</h3>
-                        <p class="text-slate-400 font-medium">CodSoft – Remote</p>
-                        <ul class="list-disc list-inside mt-2 text-slate-400 space-y-1">
-                            <li>Built responsive websites using HTML, CSS, and JavaScript.</li>
-                            <li>Implemented back-end features using Node.js and Express.</li>
+                    <div class="tl-item">
+                        <p class="when">Jan 2025 – Jul 2025</p>
+                        <h3>Software Engineer</h3>
+                        <p class="org">PawaStats — Remote</p>
+                        <ul>
+                            <li>Designed and built REST APIs for analytics and reporting with Django REST Framework</li>
+                            <li>Built interactive dashboards in React.js and Next.js, and optimized PostgreSQL queries</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item">
+                        <p class="when">Jan 2024 – Feb 2024</p>
+                        <h3>Web Developer</h3>
+                        <p class="org">CodSoft — Remote</p>
+                        <ul>
+                            <li>Built responsive web applications with HTML, CSS, JavaScript, Node.js and Express</li>
+                            <li>Worked in sprint cycles with collaborative code review</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section id="contact" class="py-20 scroll-target">
-            <div class="text-center max-w-2xl mx-auto">
-                 <h2 class="text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
-                 <p class="text-slate-400 text-lg mb-8">
-                    I'm currently open to new opportunities. If you have a project in mind or just want to connect, feel free to send me a message!
-                 </p>
-                 <a href="mailto:placideshema11@gmail.com" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-10 rounded-full transition-transform hover:scale-105 text-lg inline-block">
-                    Holla at me <i class="fas fa-paper-plane ml-2"></i>
-                 </a>
+
+        <section id="focus">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Currently Exploring</p>
+                    <h2>What I'm spending my time on right now</h2>
+                </div>
+                <div class="explore-row">
+                    <span class="explore-chip"><span class="led"></span>Cybersecurity &amp; incident response</span>
+                    <span class="explore-chip"><span class="led"></span>AI-assisted engineering</span>
+                    <span class="explore-chip"><span class="led"></span>Building for emerging markets</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="wrap about-grid">
+                <div class="about-photo"><img src="Image.jpg" alt="Placide Shema"></div>
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h2 style="margin:10px 0 20px; font-size:28px;">Building practical technology out of Kigali</h2>
+                    <p>I'm a software engineer from Kigali, Rwanda, who likes turning real problems — local services, farm operations, data collection — into products that actually get used.</p>
+                    <p>My work sits across the stack: React and Next.js on the frontend, Django and Node.js on the backend, PostgreSQL and MySQL underneath. Lately I've been pulling security into that same practice — SIEM fundamentals, log analysis, and Linux hardening — because I think the products worth building are also the ones worth defending.</p>
+                    <p>Outside of shipping code, I've worked as a field researcher collecting socio-economic data, which taught me a version of rigor that carries straight into engineering: validate your inputs, document your process, don't cut corners on accuracy.</p>
+                    <div class="lang-row">
+                        <span><b>Kinyarwanda</b> — native</span>
+                        <span><b>English</b> — professional</span>
+                        <span><b>French</b> — basic</span>
+                        <span><b>Kiswahili</b> — basic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="border-bottom:none">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Let's build something</h2>
+                </div>
+                <div class="contact-grid">
+                    <form id="contactForm">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Send message →</button>
+                        <p id="form-status"></p>
+                    </form>
+                    <div class="contact-links">
+                        <a class="contact-link" href="mailto:placideshema11@gmail.com"><span class="icon">EMAIL</span> placideshema11@gmail.com</a>
+                        <a class="contact-link" href="https://github.com/PSHEMA" target="_blank"><span class="icon">GITHUB</span> github.com/PSHEMA</a>
+                        <a class="contact-link" href="https://www.linkedin.com/in/placide-shema-8a9139249" target="_blank"><span class="icon">LINKEDIN</span> linkedin.com/in/placide-shema</a>
+                        <a class="contact-link" href="tel:+250796089755"><span class="icon">PHONE</span> +250 796 089 755</a>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
-    
-    <footer class="bg-slate-900 border-t border-slate-800">
-        <div class="container mx-auto px-6 py-6 text-center text-slate-400">
-            <div class="flex justify-center space-x-6 text-2xl mb-4">
-                    <a href="https://github.com/PSHEMA" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/placide-shema-8a9139249" target="_blank" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:placideshema11@gmail.com" class="hover:text-sky-400 transition-colors"><i class="fas fa-envelope"></i></a>
+
+    <footer>
+        <div class="wrap">
+            <span class="faint" style="font-family:var(--mono); font-size:13px;">© 2026 Placide Shema</span>
+            <div class="foot-links">
+                <a href="https://github.com/PSHEMA" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/placide-shema-8a9139249" target="_blank">LinkedIn</a>
+                <a href="mailto:placideshema11@gmail.com">Email</a>
             </div>
-            <p>&copy; 2026 Placide Shema. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
